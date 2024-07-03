@@ -29,7 +29,7 @@ function App() {
     const valor = cantidad - STEP
 
     if(valor < MIN){
-      alert('cantidad no valida')
+      alert('invalid quantity')
       return
     }
 
@@ -40,7 +40,7 @@ function App() {
     const valor = cantidad + STEP
 
     if(valor > MAX){
-      alert('cantidad no valida')
+      alert('invalid quantity')
       return
     }
 
@@ -78,7 +78,7 @@ function App() {
         </p>
 
         <h2 className="text-2xl font-extrabold text-gray-500 text-center">
-          Elige un <soan className="text-indigo-600">Plazo </soan> a pagar
+          Choose a <soan className="text-indigo-600">deadline </soan> to pay
         </h2>
 
         <select
@@ -87,18 +87,18 @@ function App() {
           value={meses}
           onChange={e => setMeses(+e.target.value)}
         >
-          <option value="6">6 Meses</option>
-          <option value="12">12 Meses</option>
-          <option value="24">24 Meses</option>
+          <option value="6">6 Months</option>
+          <option value="12">12 Months</option>
+          <option value="24">24 Months</option>
         </select>
 
         <div className="my-5 space-y-3 bg-gray-50 p-5">
           <h2 className="text-2xl font-extrabold text-gray-500 text-center">
-          Resumen <soan className="text-indigo-600">de pagos </soan> 
+          Payment <soan className="text-indigo-600">summary </soan> 
         </h2>
-        <p className="text-xl text-gray-500 text-center font-bold">{meses} Meses</p>
-        <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total a pagar</p>
-        <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(pago)}Pagos Mensuales</p>
+        <p className="text-xl text-gray-500 text-center font-bold">{meses} Months</p>
+        <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total to pay</p>
+        <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(pago)} Monthly payments</p>
         </div>
 
 
